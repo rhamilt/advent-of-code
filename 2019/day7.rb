@@ -1,0 +1,1 @@
+computer = Computer.new('day7.txt')
