@@ -15,10 +15,8 @@ lines.each do |line|
 		awake = true
 		guards[guard] = {} if !guards.keys.include? guard
 	else
-		if action.include? "falls"
-			awake = false
-		else
-			awake = true
+		awake = !awake
+		if !action.include? "falls" #I originally had two cases, but this is actually shorter
 			for i in (lastTime..minute-1) do 
 				guards[guard][i] = 0 if !guards[guard].keys.include? i
 				guards[guard][i] += 1
