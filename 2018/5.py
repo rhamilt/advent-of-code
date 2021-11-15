@@ -1,13 +1,11 @@
 import sys
-with open('day5_input.txt', 'r') as infile:
+with open('5.txt', 'r') as infile:
 	line = infile.read().strip()
-
 
 def are_opp(a, b):
     return (a.lower() == b.lower() and
             ((a.isupper() and b.islower()) or
              (a.islower() and b.isupper())))
-
 
 def react(line):
     buf = []
