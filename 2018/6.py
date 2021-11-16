@@ -36,7 +36,7 @@ def checkDistances(distances):
 	return True
 
 alpha = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-with open("day6_input.txt", 'r') as infile:
+with open("6.txt", 'r') as infile:
 	lines = infile.readlines()
 	coords = {}
 	for count, line in enumerate(lines):
