@@ -41,10 +41,6 @@ def p2
 	actions = {}
 	time = -1
 	while !q.empty? or workers.values.join != ""
-		#p workers
-		#p actions
-		#p q 
-		#gets.chomp
 		workers.keys.each do |worker|
 			if actions[workers[worker]] == 1
 				prereqs[workers[worker]].each do |postreq|
@@ -58,7 +54,7 @@ def p2
 			end
 			if workers[worker] == "" and !q.empty?
 				workers[worker] = q.shift 
-				actions[workers[worker]] =  timeCalc(workers[worker])
+				actions[workers[worker]] = timeCalc(workers[worker])
 			end
 		end
 		time += 1
