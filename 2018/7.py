@@ -96,9 +96,3 @@ while len(nodes) > 0 or workersBusy > 0:
 	nodes, available = addToAvailable(nodes, available)
 	time += 1
 print (time)
-
-
-
-
-
-
