@@ -11,7 +11,7 @@ for instruc in instrucs:
 		idx[1] = max(0, min(idx[1] + DIRECS[direc][1], 2))
 	code += keypad[idx[0]][idx[1]]
 
-#print (code) #part 1: got it first try, felt like a loser for using if statements, went back and did this more cool way
+print (code) #part 1: got it first try, felt like a loser for using if statements, went back and did this more cool way
 
 code = ''
 keypad = [
