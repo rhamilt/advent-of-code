@@ -32,7 +32,7 @@ low_points.each do |low_point|
 	q << [r, c-1] if c-1 >= 0
 	q << [r, c+1] if c+1 < grid[0].length
 	while !q.empty?
-		point = q.shift
+		point = q.pop #Originally had switch, pop is like 2 times as fast
 		r,c = point[0], point[1]
 		if grid[r][c] != 9
 			basin << [r, c]
