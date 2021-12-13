@@ -19,15 +19,10 @@ instrucs.split("\n").map(&:strip).each do |instruc|
 	direc, line = m[1], m[2].to_i
 	newGrid = Set[]
 	grid.each do |point|
-		if direc == "x"
-			break if point[0] == line
-			newPoint = point
-			newPoint[0] = line - (point[0]-line) if point[0] > line
-		else
-			break if point[1] == line
-			newPoint = point
-			newPoint[1] = line - (point[1]-line) if point[1] > line
-		end
+		idx = (direc == "y" ? 1 : 0)
+		break if point[idx] == line
+		newPoint = point
+		newPoint[idx] = line - (point[idx]-line) if point[idx] > line
 		newGrid << newPoint
 	end
 	grid = newGrid
