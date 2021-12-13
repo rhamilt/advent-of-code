@@ -38,7 +38,7 @@ end
 gridLayout = []
 6.times do |i| #These values are the exact size of the output did not do this in comp
 	row = []
-	39.times { row << "." }
+	39.times { row << " " }
 	gridLayout << row
 end
 #fill array with points
