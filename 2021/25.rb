@@ -29,8 +29,9 @@ while true
 end
 
 =begin part 1
-	Was nobody going to tell me that clone only makes a shallow copy???? I guess it's been working
-	for non-matrices, but this really screwed me over because i've been using it as a deep copy.
+	Was nobody going to tell me that clone only makes a shallow copy??
+	I guess it's been working for non-matrices, but this really screwed me over 
+	because i've been using it as a deep copy. 
 	It's ok though, just happy to have completed the challenges this year :)
 =end
 p step
