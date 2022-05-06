@@ -1,10 +1,8 @@
 require "set"
 coordList, instrucs = File.open("13.txt").read.split("\n\n").map(&:strip)
 =begin Interesting behavior explanation
-	In testing this, I found that on the command line this doesn't work because of 
-	carriage returns in the input. Instead, I have to split \n\r. However, that doesn't
-	work then when I run it in sublime. Interesting thing that might be related to
-	the version of ruby that I'm running?
+	In testing this, I found that on the command line this doesn't work because of carriage returns in the input. Instead, I have to split \n\r. However,
+	that doesn't work then when I run it in sublime.
 =end
 
 grid = Set[]
@@ -46,7 +44,7 @@ grid.each { |point| gridLayout[point[1]][point[0]] = "#" }
 #print
 gridLayout.each { |row| puts row.join} #HZLEHJRK is the output
 =begin part 2
-	Kevin pointed out that you should just go through possible points and print a dot
-	when there is a dot. Silly of me to actually make a grid like I did. Narrowly missed
-	top 1000 on this one
+	Kevin pointed out that you should just go through possible points and print 
+	a dot when there is a dot. Silly of me to actually make a grid like I did. 
+	Narrowly missed top 1000 on this one
 =end
